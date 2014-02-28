@@ -11,12 +11,10 @@ import java.util.regex.Pattern;
 
 public class Main {
 	
-	private static void start(String productId, String emailId){
-		//List<Double> response = Fetcher.getProduct(productId);
+	private static void start(String productId, String emailId){		
 		
-		// Send requests and get response of a specific product id
-		List<String> response = Fetcher.getProduct(productId);
-		System.out.println(response);		
+		// Send requests and get information of a specific product id
+		List<String> response = Fetcher.getProduct(productId);			
 		
 		if(response != null){
 			if(response.size() > 0){				
@@ -76,8 +74,8 @@ public class Main {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String productId = getUserInput("Product Id: ");	//"8314215";
-		String emailId = getUserInput("Your Email: ");		//"malom@luc.edu";		
+		String productId = getUserInput("Product Id: ");	// "8314215";	
+		String emailId = getUserInput("Your Email: ");		// "malom@luc.edu";				
 		
 		if(!emailValidator(emailId)){						// If wrong email format then exit	
 			System.out.println("Invalid Email!");	
@@ -85,6 +83,7 @@ public class Main {
 		}
 				
 		
+		start(productId, emailId);			// Start the task
 		while(true){
 			start(productId, emailId);			// Start the task
 			sleep(1000 * Global.HOUR * 6);		// Check on every 6 hours			

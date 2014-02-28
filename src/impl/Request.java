@@ -9,7 +9,8 @@ import java.io.InputStreamReader;
 import com.google.gson.Gson;
 
 /*
- * Does the http GET request and returns back the response
+ * Does the http GET request and returns back the JSON response which is then parsed
+ * to extract the useful information
  */
 class Request {
 		
@@ -19,13 +20,13 @@ class Request {
 			url = new URL(pageUrl);
 			InputStream inputStream = url.openStream();
 			BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-		    String response = reader.readLine();		    		    		    
+		    String response = reader.readLine();		    		    		    		    
 		    //System.out.println(response);
 		    
-		    ProductUnit product = new Gson().fromJson(response, ProductUnit.class);
-		    List<ProductUnit> results = product.getResults();
+		    ProductUnit productJSON = new Gson().fromJson(response, ProductUnit.class);		    
+		    List<ProductUnit> product = productJSON.getProduct();
 		    
-		    return results;		    
+		    return product;		    
 		    
 		} catch (Exception e) {
 			// TODO Auto-generated catch block			

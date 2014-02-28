@@ -8,14 +8,12 @@ import java.util.List;
  */
 class ProductUnit {	
 	private String productId;
-	private String productName;
-	private String price;
-	private String originalPrice;
-    private List<ProductUnit> results;
+	private String productName;	
+	private List<StyleUnit> styles;    
+	private List<ProductUnit> product;
 
     public String getProductId()	{	return productId;	}
-    public String getProductName()	{	return productName;	}
-    public String getPrice()	{	return price;	}
-    public String getOriginalPrice()	{	return originalPrice;	}
-    public List<ProductUnit> getResults() { return results; }               
+    public String getProductName()	{	return productName;	}    
+    public List<StyleUnit> getStyles() { return styles; }
+    public List<ProductUnit> getProduct() { return product; }
 }
