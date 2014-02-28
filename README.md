@@ -1,4 +1,5 @@
-The application is about to send email notification to the user whenever his/her desired product's price goes off by at least 20%
+The application is about to send email notification to the user whenever his/her desired product's price goes off by at least 20%, on Zappos.com. It uses the Zappos Api to facilitate that.
+
 
 Input:
 ------
