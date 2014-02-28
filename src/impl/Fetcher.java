@@ -15,7 +15,7 @@ public class Fetcher {
 		String pageUrl = Global.ZAPPOS_API + "/Product?id=" + "[" + "\"" + productId + "\"" + "]" + "&includes=[\"styles\"]" + "&key=" + Global.API_KEY;		
 		List<ProductUnit> product = Request.GET(pageUrl);		
 		
-		if(product == null)		System.out.println("Bad product from server!");			
+		if(product == null)		System.out.println("Bad response from server!");			
 		else{
 			List<String> itemInfo = new ArrayList<>();
 			if(product.size() > 0){
