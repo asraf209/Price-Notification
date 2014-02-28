@@ -86,6 +86,8 @@ public class Main {
 		start(productId, emailId);			// Start the task
 		while(true){
 			start(productId, emailId);			// Start the task
+			System.out.println();
+			System.out.println("Application is sleeping now. It will again check 6 hours later..");
 			sleep(1000 * Global.HOUR * 6);		// Check on every 6 hours			
 		}
 		
